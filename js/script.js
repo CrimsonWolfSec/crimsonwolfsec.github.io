@@ -49,7 +49,6 @@
 			progressLinear: $(".progress-linear"),
 			circleProgress: $(".progress-bar-circle"),
 			dateCountdown: $('.DateCountdown'),
-			pageLoader: $(".preloader"),
 			flickrfeed: $(".flickr"),
 			selectFilter: $("select"),
 			rdAudioPlayer: $(".rd-audio"),
@@ -73,19 +72,6 @@
 			textRotator: $(".text-rotator"),
 			particles: $('#particles-js')
 		};
-
-	/**
-	 * Page loader
-	 * @description Enables Page loader
-	 */
-	if (plugins.pageLoader.length > 0 && !isNoviBuilder) {
-		$window.on('load', function () {
-			plugins.pageLoader.fadeOut('slow');
-			$window.trigger("resize");
-		});
-	} else {
-		plugins.pageLoader.remove();
-	}
 
 	/**
 	 * Initialize All Scripts
